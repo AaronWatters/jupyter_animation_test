@@ -1,0 +1,11 @@
+
+pip install --upgrade   jp_proxy_widget
+jupyter nbextension enable --py --sys-prefix jp_proxy_widget
+
+pip install --upgrade jupyterlab
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install jp_proxy_widget
+pip install git+https://github.com/aaronwatters/jp_doodle
+
+mkdir -p .jupyter
+echo "c.NotebookApp.iopub_data_rate_limit = 10000000" > .jupyter/jupyter_notebook_config.py
